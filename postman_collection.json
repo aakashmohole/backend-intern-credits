@@ -1,0 +1,111 @@
+{
+  "info": {
+    "name": "Credit Management API",
+    "description": "Postman collection to test Credit Management API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get User Credits",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/credits/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "credits", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Credits",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"amount\": 10\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/credits/1/add",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "credits", "1", "add"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Deduct Credits",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"amount\": 5\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/credits/1/deduct",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "credits", "1", "deduct"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Reset Credits",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/credits/1/reset",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "credits", "1", "reset"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Schema",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"sql\": \"ALTER TABLE credits ADD COLUMN bonus_credits INTEGER DEFAULT 0;\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/schema/update",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "schema", "update"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
