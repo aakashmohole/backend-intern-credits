@@ -1,4 +1,4 @@
-```markdown
+
 # Credit Management API
 
 This project is a Credit Management service built with FastAPI and PostgreSQL (NeonDB). It tracks user credits for actions such as publishing articles, commenting, and mentoring. The service exposes APIs to query and modify user credits, supports dynamic schema updates, and runs a daily background job to add credits automatically.
@@ -114,15 +114,3 @@ Swagger UI docs: `http://localhost:8000/docs`
 - Use environment variables for sensitive data like database credentials.
 
 ---
-
-## License
-
-This project is provided for educational purposes.
-
----
-
-## Contact
-
-For questions or support, contact the project maintainer.
-
-```
